@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/oui_lookup'
+
+unless ARGV.size == 1
+  puts "Usage: #{File.basename $0} <MAC>" 
+  exit 1
+end
+OUI_Lookup::Lookup.new(ARGV.last).run

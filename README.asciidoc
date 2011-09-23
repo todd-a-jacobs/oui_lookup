@@ -1,0 +1,105 @@
+OUI_Lookup README
+=================
+
+== Copyright and Licensing
+
+Copyright (C) 2011 Todd A. Jacobs +
+All rights reserved.
+
+=== Software License
+
+image:http://www.gnu.org/graphics/gplv3-88x31.png[GNU General Public
+License, Version 3]
+
+The software is licensed under the
+http://www.gnu.org/copyleft/gpl.html[GPLv3]. The LICENSE is also
+included in the source tree.
+
+=== README License
+
+// Creative Commons Attribution-NonCommercial-ShareAlike 3.0 United
+// States License
+
++++
+<a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/"><img
+alt="Creative Commons License" style="border-width:0"
+src="http://i.creativecommons.org/l/by-nc-sa/3.0/us/88x31.png" /></a><br
+/><span xmlns:dct="http://purl.org/dc/terms/"
+href="http://purl.org/dc/dcmitype/Text" property="dct:title"
+rel="dct:type">OUI_Lookup README</span> by <a
+xmlns:cc="http://creativecommons.org/ns#"
+href="https://github.com/CodeGnome/oui_lookup"
+property="cc:attributionName" rel="cc:attributionURL">Todd A. Jacobs</a>
+is licensed under a <a rel="license"
+href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">Creative
+Commons Attribution-NonCommercial-ShareAlike 3.0 United States
+License</a>.
++++
+
+== Purpose
+
+The IEEE hands out Organizationally Unique Identifiers to companies for
+use in such things as manufacturing NIC cards. The first three octets of
+a MAC address should be the manufacturer's prefix, so this gem may be
+useful in identifyng NIC cards or constructing valid MAC addresses.
+
+== Installation and Usage
+
+The install instructons assume RVM with Ruby 1.9.2. The dependencies
+aren't heavy, and it would probably take less time to backport the tests
+and syntax to 1.8.7 than it did to write this sentence, but life is like
+that sometimes. Don't file a bug about it; just make sure you are using
+the correct Ruby within RVM.
+
+.Installing the OUI_Lookup Gem
+----------------------------------------------------------------------
+gem install oui_lookup
+----------------------------------------------------------------------
+
+.Running the CLI
+----------------------------------------------------------------------
+oui_lookup <mac_address_or_prefix>
+----------------------------------------------------------------------
+
+.Using the Library
+----------------------------------------------------------------------
+require 'oui_lookup'
+----------------------------------------------------------------------
+
+== Sample Output
+
+No screenshots here, just samples of what you can expect from running
+this thing.
+
+[NOTE]
+The input format is pretty flexible. It will take both a three-octet
+prefix, as well as a full MAC address with six octets. It's also pretty
+agnostic about separators (or the lack thereof).
+
+.Looking up a valid prefix
+----------------------------------------------------------------------
+$ oui_lookup 000000
+Searching...
+
+00-00-00   (hex)		XEROX CORPORATION
+000000     (base 16)		XEROX CORPORATION
+				M/S 105-50C
+				800 PHILLIPS ROAD
+				WEBSTER NY 14580
+				UNITED STATES
+----------------------------------------------------------------------
+
+.Looking up a MAC address with an unregistered prefix
+----------------------------------------------------------------------
+$ oui_lookup FF:FF:FF:FF:FF:FF
+Searching...
+
+OUI not found: FF-FF-FF
+----------------------------------------------------------------------
+
+== Further Reading
+
+. http://beginrescueend.com/[Ruby Version Manager (RVM)]
+. http://rubygems.org/[RubyGems]
+. http://standards.ieee.org/develop/regauth/oui/index.html[IEEE OUIs]
