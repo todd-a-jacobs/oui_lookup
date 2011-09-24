@@ -1,5 +1,7 @@
 = OUI_Lookup
 
+http://secure.travis-ci.org/CodeGnome/oui_lookup.png
+
 == Copyright and Licensing
 
 === Copyright Notice
