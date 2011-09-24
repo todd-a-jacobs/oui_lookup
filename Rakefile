@@ -1,7 +1,12 @@
+begin
+  require 'bundler/gem_tasks'
+  require 'bundler/setup'
+rescue LoadError => bundler_missing
+  $stderr.puts bundler_missing
+end
+
 require 'rake'
 require 'rake/testtask'
-require 'bundler/gem_tasks'
-require 'bundler/setup'
 
 desc 'Update exuberant-ctags'
 task :etags do
