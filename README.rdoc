@@ -1,6 +1,12 @@
 = OUI_Lookup
 
-http://secure.travis-ci.org/CodeGnome/oui_lookup.png
+== Code Status
+
+{<img src="https://travis-ci.org/CodeGnome/oui_lookup.png" alt="Travis
+CI Build Status" />}[https://travis-ci.org/CodeGnome/oui_lookup]
+{<img src="https://codeclimate.com/github/CodeGnome/oui_lookup.png"
+alt="CodeClimate Status"
+/>}[https://codeclimate.com/github/CodeGnome/oui_lookup]
 
 == Copyright and Licensing
 
