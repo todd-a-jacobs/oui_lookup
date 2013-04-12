@@ -12,7 +12,7 @@ alt="CodeClimate Status"
 
 === Copyright Notice
 
-    Copyright 2011 Todd A. Jacobs
+    Copyright 2011, 2013 Todd A. Jacobs
     All rights reserved.
 
 === Software License
