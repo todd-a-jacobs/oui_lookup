@@ -39,11 +39,12 @@ useful in identifyng NIC cards or constructing valid MAC addresses.
 
 == Installation and Usage
 
-The install instructons assume RVM with Ruby 1.9.2. The dependencies
-aren't heavy, and it would probably take less time to backport the tests
-and syntax to 1.8.7 than it did to write this sentence, but life is like
-that sometimes. Don't file a bug about it; just make sure you are using
-the correct Ruby within RVM.
+The install instructons assume RVM with Ruby 1.9.2, but the code is also
+tested with Ruby 2.0.0. The dependencies aren't heavy, and it would
+probably take less time to backport the tests and syntax to
+1.8.7 than it did to write this sentence, but life is like that
+sometimes. Don't file a bug about it; just make sure you are using the
+correct Ruby within RVM.
 
 === Installing the OUI_Lookup Gem
 
